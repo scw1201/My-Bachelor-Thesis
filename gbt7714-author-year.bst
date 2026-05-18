@@ -50,7 +50,7 @@ INTEGERS {
 
 FUNCTION {load.config}
 {
-  #1 'uppercase.name :=
+  #0 'uppercase.name :=
   #3 'max.num.authors :=
   #0 'period.between.author.year :=
   #1 'sentence.case.title :=
@@ -504,7 +504,7 @@ FUNCTION {format.names}
             { bbl.et.al }
             { t get.str.lang 'name.lang :=
               name.lang lang.en =
-                { t #1 "{vv~}{ll}{~f{~}}" format.name$
+                { t #1 "{vv~}{ll}{ ff}" format.name$
                   uppercase.name
                     { "u" change.case$ }
                     'skip$
@@ -575,7 +575,7 @@ FUNCTION {format.full.names}
     { s nameptr "{vv~}{ll}{, jj}{, ff}" format.name$ 't :=
       t get.str.lang 'name.lang :=
       name.lang lang.en =
-        { t #1 "{vv~}{ll}" format.name$ 't := }
+        { t #1 "{vv~}{ll}{ ff}" format.name$ 't := }
         { t #1 "{ll}{ff}" format.name$ 't := }
       if$
       nameptr #1 >
