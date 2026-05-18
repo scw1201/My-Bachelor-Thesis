@@ -90,16 +90,24 @@ The LaTeX template for thesis of BUAA]
         {\setCJKfamilyfont{heiti}[AutoFakeBold = {2.17}]{SimHei}}}
 \IfFontExistsTF{Kaiti SC}
     {\setCJKfamilyfont{hwxingkai}[AutoFakeBold = {2.17}]{Kaiti SC}}
-    {\setCJKfamilyfont{hwxingkai}[AutoFakeBold = {2.17}]{Songti SC}}
+    {\IfFontExistsTF{Songti SC}
+        {\setCJKfamilyfont{hwxingkai}[AutoFakeBold = {2.17}]{Songti SC}}
+        {\setCJKfamilyfont{hwxingkai}[AutoFakeBold = {2.17}]{SimSun}}}
 \IfFontExistsTF{Kaiti SC}
     {\setCJKfamilyfont{hwkaiti}[AutoFakeBold = {2.17}]{Kaiti SC}}
-    {\setCJKfamilyfont{hwkaiti}[AutoFakeBold = {2.17}]{Songti SC}}
+    {\IfFontExistsTF{Songti SC}
+        {\setCJKfamilyfont{hwkaiti}[AutoFakeBold = {2.17}]{Songti SC}}
+        {\setCJKfamilyfont{hwkaiti}[AutoFakeBold = {2.17}]{SimSun}}}
 \IfFontExistsTF{Kaiti SC}
     {\setCJKfamilyfont{kai}[AutoFakeBold = {2.17}]{Kaiti SC}}
-    {\setCJKfamilyfont{kai}[AutoFakeBold = {2.17}]{Songti SC}}
+    {\IfFontExistsTF{Songti SC}
+        {\setCJKfamilyfont{kai}[AutoFakeBold = {2.17}]{Songti SC}}
+        {\setCJKfamilyfont{kai}[AutoFakeBold = {2.17}]{SimSun}}}
 \IfFontExistsTF{Kaiti SC}
     {\setCJKfamilyfont{zhkai}[AutoFakeBold = {2.17}]{Kaiti SC}}
-    {\setCJKfamilyfont{zhkai}[AutoFakeBold = {2.17}]{Songti SC}}
+    {\IfFontExistsTF{Songti SC}
+        {\setCJKfamilyfont{zhkai}[AutoFakeBold = {2.17}]{Songti SC}}
+        {\setCJKfamilyfont{zhkai}[AutoFakeBold = {2.17}]{SimSun}}}
 \newcommand{\songti}{\CJKfamily{songti}}
 \newcommand{\heiti}{\CJKfamily{heiti}}
 \newcommand{\hwxingkai}{\CJKfamily{hwxingkai}}

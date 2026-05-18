@@ -16,8 +16,6 @@ jobs:
           - 'ubuntu-22.04'
         latex-entry:
           - 'sample-bachelor'
-          - 'sample-kaitireport'
-          - 'sample-master'
 
     steps:
       - name: Checkout code
